@@ -21,7 +21,7 @@ const AddEmail = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/api/add-email", formData, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/add-email`, formData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
